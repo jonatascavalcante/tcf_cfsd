@@ -75,7 +75,6 @@ $(document).ready(function() {
 		absNote = calculate_abdominal_score(gender, absQtd);
 		$("#abs_note").html(absNote);
 		shuttleRunNote = calculate_shuttle_run_score(convertTime(shuttlerunTime, 100));
-		debugger;
 		$("#shuttle_run_note").html(shuttleRunNote);
 		runningNote = calculate_running_score(gender, convertTime(runningTime, 60));
 		$("#running_note").html(runningNote);
