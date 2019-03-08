@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	//Initially loads the form for the male gender
 	$("#pushUp").hide();
-	$("#tfc_result").hide();
+	$("#tcf_result").hide();
 
 	//Changes the bars test based on the gender input change
 	$genders.change(function() {
@@ -27,11 +27,11 @@ $(document).ready(function() {
 	$("#btnCalcular").click(function() {
 		 if ($("#absQtd").val() && $("#shuttlerunTime").val()) {
 		 	if (!isFemale && $("#barsQtd").val()) {
-		 		$("#tfc_form").submit();
+		 		$("#tcf_form").submit();
 		 		return;
 		 	}
 		 	if (isFemale && $("#pushUpQtd").val()) {
-		 		$("#tfc_form").submit();
+		 		$("#tcf_form").submit();
 		 		return;
 		 	}
 		 	window.alert("É necessário preencher todos os campos para realizar o cálculo");
@@ -40,11 +40,11 @@ $(document).ready(function() {
 		 }
 	});
 
-	//Treates the TFC form submission
-	$("#tfc_form").submit(function(event) {
+	//Treates the TCF form submission
+	$("#tcf_form").submit(function(event) {
 		event.preventDefault();
-		$("#tfc_form").hide();
-		$("#tfc_result").show();
+		$("#tcf_form").hide();
+		$("#tcf_result").show();
 
 		var gender = 'male';
 		var strength, tafScore;
@@ -78,8 +78,8 @@ $(document).ready(function() {
 		$("#shuttle_run_note").html(shuttleRunNote);
 		runningNote = calculate_running_score(gender, convertTime(runningTime, 60));
 		$("#running_note").html(runningNote);
-		tfcScore = (strengthNote + absNote + shuttleRunNote + runningNote).toFixed(1);
-		$("#tfc_score").html("Nota Final no TFC: " + tfcScore);
+		tcfScore = (strengthNote + absNote + shuttleRunNote + runningNote).toFixed(1);
+		$("#tcf_score").html("Nota Final no TCF: " + tcfScore);
 	});	
 
 	$("#shuttlerunTime").keyup(function() {
@@ -92,8 +92,8 @@ $(document).ready(function() {
 	});
 
 	$("#btnAlterarDados").click(function() {
-		$("#tfc_form").show();
-		$("#tfc_result").hide();
+		$("#tcf_form").show();
+		$("#tcf_result").hide();
 
 	});
 
