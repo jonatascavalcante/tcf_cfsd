@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	    <meta charset="utf-8">
+	   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="Calculadora TFC - CFSd BM/20">
+	    <meta name="author" content="Jonatas Cavalcante">
+
+	    <title>Calculadora TFC - CFSd BM/20</title>
+
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<form id="tfc_form">
+		    	<ul class="flex-outer">
+		    		<li>
+		    			<div class="bar">
+							<h1>Calculadora TFC - CFSd BM/20</h1>
+						</div>
+		    		</li>
+			    	<li>
+				    	<label for="gender">Sexo </label>
+				    	<div>
+					    	<input type="radio" name="gender" value="male" checked> Masculino
+					    	<input type="radio" name="gender" value="female"> Feminino
+					    </div>
+				   	</li>
+				   	<li>
+					   	<div class="bar">
+							<h1>Provas</h1>
+							<i class="fas fa-running"></i>
+						</div>
+					</li>
+					<li id="bars">
+			    		<label for="bars">Barra Fixa</label>
+			    		<input type="number" id="barsQtd" name="barsQtd" placeholder="Quantidade de barras">
+			    	</li>
+			    	<li id="pushUp">
+			    		<label for="pushUp">Flexão 6 apoios</label>
+			    		<input type="number" id="pushUpQtd" name="pushUpQtd" placeholder="Quantidade de flexões">
+			    	</li>
+			    	<li>
+			    		<label for="abs">Abdominais</label>
+			    		<input type="number" id="absQtd" name="absQtd" placeholder="Quantidade de abdominais">
+			    	</li>
+			    	<li>
+			    		<label for="shuttlerun">Shuttle Run</label>
+			    		<input id="shuttlerunTime" name="shuttlerunTime" type="text" placeholder="00:00" data-mask="00:00">
+			    	</li>
+				   	<li id="running">
+			    		<label for="running">Corrida 2.400m</label>
+			    		<input type="time" id="runningTime" name="runningTime" min="00:00" value="00:00">
+			    	</li>
+			    	<li>
+        				<button type="button" id="btnCalcular">Calcular</button>
+      				</li>
+			    </ul>
+		    </form>
+
+		    <div id="tfc_result">
+			    <div class="bar">
+					<h1>Resultado TFC</h1>
+					<i class="fas fa-trophy"></i>
+				</div>
+			    <table>
+			    	<thead>
+			    		<tr>
+			    			<td>Prova</td>
+			    			<td>Execução</td>
+			    			<td>Nota</td>
+			    		</tr>
+			    	</thead>
+			    	<tbody>
+			    		<tr>
+			    			<td id="strength_test" class="test-name"></td>
+			    			<td id="strength_exec"></td>
+			    			<td id="strength_note"></td>
+			    		</tr>
+			    		<tr>
+			    			<td class="test-name">Abdominais</td>
+			    			<td id="abs_exec"></td>
+			    			<td id="abs_note"></td>
+			    		</tr>
+			    		<tr>
+			    			<td class="test-name">Shuttle Run</td>
+			    			<td id="shuttle_run_exec"></td>
+			    			<td id="shuttle_run_note"></td>
+			    		</tr>
+			    		<tr>
+			    			<td class="test-name">Corrida 2.400m</td>
+			    			<td id="running_exec"></td>
+			    			<td id="running_note"></td>
+			    		</tr>
+			    		
+			    	</tbody>
+			    </table>
+
+			    <p id="tfc_score" class="tfc-score"></p>
+			    
+			    <div class="button">
+			    	<button type="button" id="btnAlterarDados">Alterar Dados</button>
+			    	<button type="button" id="btnNovoCalculo">Novo Cálculo</button>
+			    </div>
+			</div>
+
+			<footer>Desenvolvido por Sd BM <b>Jonatas</b> Cavalcante</footer>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+	    
+	   	<script type="text/javascript" src="bars.js"></script>
+	   	<script type="text/javascript" src="push_up.js"></script>
+	    <script type="text/javascript" src="abdominal.js"></script>
+	    <script type="text/javascript" src="shuttle_run.js"></script>
+	    <script type="text/javascript" src="running.js"></script>
+
+	    <script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
