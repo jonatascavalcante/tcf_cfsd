@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$("#shuttle_run_note").html(shuttleRunNote);
 		runningNote = calculate_running_score(gender, convertTime(runningTime, 60));
 		$("#running_note").html(runningNote);
-		tfcScore = strengthNote + absNote + shuttleRunNote + runningNote;
+		tfcScore = (strengthNote + absNote + shuttleRunNote + runningNote).toFixed(1);
 		$("#tfc_score").html("Nota Final no TFC: " + tfcScore);
 	});	
 
