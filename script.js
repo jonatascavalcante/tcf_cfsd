@@ -6,6 +6,7 @@ $(document).ready(function() {
 	//Initially loads the form for the male gender
 	$("#pushUp").hide();
 	$("#tcf_result").hide();
+	$("#footer").hide();
 
 	//Changes the bars test based on the gender input change
 	$genders.change(function() {
@@ -80,6 +81,8 @@ $(document).ready(function() {
 		$("#running_note").html(runningNote);
 		tcfScore = (strengthNote + absNote + shuttleRunNote + runningNote).toFixed(1);
 		$("#tcf_score").html("Nota Final no TCF: " + tcfScore);
+
+		$("#footer").show();
 	});	
 
 	$("#shuttlerunTime").keyup(function() {
@@ -94,7 +97,7 @@ $(document).ready(function() {
 	$("#btnAlterarDados").click(function() {
 		$("#tcf_form").show();
 		$("#tcf_result").hide();
-
+		$("#footer").hide();
 	});
 
 	$("#btnNovoCalculo").click(function() {
