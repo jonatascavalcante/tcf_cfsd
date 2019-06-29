@@ -67,6 +67,10 @@ $(document).ready(function() {
 			strengthNote = calculate_bars_score(strength);
 			$("#strength_note").html(strengthNote);
 		}
+
+        if(shuttlerunTime.length < 3) {
+            shuttlerunTime += ':00';
+        }
 		
 		$("#strength_exec").html(strength);
 		$("#abs_exec").html(absQtd);
