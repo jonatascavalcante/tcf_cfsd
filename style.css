@@ -10,6 +10,7 @@ body, h1 {
 	display: inline;
 }
 
+
 .bar {
 	background-color: #B02E0C;
 	padding-top: 10px;
@@ -133,4 +134,10 @@ footer {
 	font-size: 15px;
 	text-align: center;
 	bottom: 0;
+}
+
+
+a, a:visited, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: #fff;
 }
